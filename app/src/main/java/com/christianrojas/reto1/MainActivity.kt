@@ -19,6 +19,14 @@ class MainActivity : AppCompatActivity() {
             val nombre = etNombre.text.toString()
             tvResultado.text = "Hola $nombre, datos guardados."
         }
+        val cbAndroid = findViewById<android.widget.CheckBox>(R.id.cbAndroid)
+        cbAndroid.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                tvResultado.text = "Has marcado Android"
+            } else {
+                tvResultado.text = "Has desmarcado Android"
+            }
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
