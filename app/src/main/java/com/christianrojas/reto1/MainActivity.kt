@@ -27,6 +27,14 @@ class MainActivity : AppCompatActivity() {
                 tvResultado.text = "Has desmarcado Android"
             }
         }
+        val swNotificaciones = findViewById<android.widget.Switch>(R.id.swNotificaciones)
+        swNotificaciones.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                android.widget.Toast.makeText(this, "Notificaciones activadas", android.widget.Toast.LENGTH_SHORT).show()
+            } else {
+                android.widget.Toast.makeText(this, "Notificaciones desactivadas", android.widget.Toast.LENGTH_SHORT).show()
+            }
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
