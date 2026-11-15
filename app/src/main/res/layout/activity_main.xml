@@ -89,6 +89,7 @@
             android:layout_marginBottom="12dp"/>
 
         <EditText
+            android:id="@+id/etNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Introduce tu nombre"
@@ -103,16 +104,19 @@
             android:layout_marginBottom="4dp"/>
 
         <CheckBox
+            android:id="@+id/cbAndroid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Android"/>
 
         <CheckBox
+            android:id="@+id/cbReact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="React" />
 
         <CheckBox
+            android:id="@+id/cbFlutter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Flutter"
@@ -147,6 +151,7 @@
         </RadioGroup>
 
         <Switch
+            android:id="@+id/swNotificaciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Notificaciones"
@@ -178,12 +183,14 @@
             android:layout_marginBottom="16dp" />
 
         <Button
+            android:id="@+id/btnGuardar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Guardar información"
             android:layout_marginBottom="12dp" />
 
         <TextView
+            android:id="@+id/tvResultado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Aquí aparecerá el resultado."/>
